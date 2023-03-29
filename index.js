@@ -27,7 +27,7 @@ newAcc.decrement();
  при виклику якого значення збереженого числа має стати таким, яким його передали в конструкторі.
 */
 function CancelableAccumulator(number) {
-  Acumullator.call((this.value = number));
+  Acumullator.call(this, number);
   this.originalValue = number;
 }
 
