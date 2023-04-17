@@ -9,10 +9,12 @@ function Acumullator(number) {
 
 Acumullator.prototype.increment = function () {
   this.value += 1;
+  console.log("Acumullator +1 =", this.value);
 };
 
 Acumullator.prototype.decrement = function () {
   this.value -= 1;
+  console.log("Acumullator -1 =", this.value);
 };
 
 const newAcc = new Acumullator(10);
@@ -35,6 +37,7 @@ CancelableAccumulator.prototype = Object.create(Acumullator.prototype);
 
 CancelableAccumulator.prototype.clear = function () {
   this.value = this.originalValue;
+  console.log("The base value:", this.value);
 };
 
 const newAcc2 = new CancelableAccumulator(33);
@@ -45,5 +48,3 @@ newAcc2.increment();
 newAcc2.decrement();
 
 newAcc2.clear();
-
-console.log(newAcc2);
